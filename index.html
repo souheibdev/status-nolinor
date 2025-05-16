@@ -3,59 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site en Maintenance</title>
+    <title>SGS Nolinor - Site Indisponible</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #f8f9fa;
             height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            color: #333;
-            padding: 20px;
+            justify-content: center;
         }
         
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
+        .jumbotron {
+            background-color: white;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 0.8s ease-in-out;
         }
         
-        .logo {
-            margin-bottom: 30px;
-            max-height: 80px;
-            width: auto;
+        .logo-container {
+            margin: 20px auto;
+            display: block;
+            width: 100px;
+            height: 100px;
         }
         
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #2c3e50;
+        .display-4 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1.5rem;
         }
         
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 25px;
+        .lead {
             color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 85%;
         }
         
-        .url {
-            margin-top: 25px;
-            font-size: 16px;
-            color: #7f8c8d;
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
         }
         
         @keyframes fadeIn {
@@ -69,58 +62,39 @@
             }
         }
         
-        .maintenance-icon {
-            width: 120px;
-            height: 120px;
-            margin: 20px auto;
-        }
-        
-        .maintenance-icon path {
-            fill: #3498db;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 30px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            p {
-                font-size: 16px;
-            }
-            
-            .maintenance-icon {
-                width: 80px;
-                height: 80px;
-            }
+        .url-footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #999;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo Nolinor en SVG -->
-        <svg class="logo" viewBox="0 0 284 111" xmlns="http://www.w3.org/2000/svg">
-            <path d="M178.8 54.9c-7.3-5-15.5-8.2-24.8-8.2-9.2 0-15.5 3.2-15.5 8.2 0 17.2 47.8 7.5 47.8 34.9 0 14.5-15.5 21.2-32.2 21.2-11 0-23.2-3-32.2-9.2l5.3-10.9c7.3 5.6 18.2 9.2 27.3 9.2 9.8 0 17.2-3.2 17.2-9.5 0-17.8-47.8-7.5-47.8-34.3 0-13.9 14.5-20.5 30.4-20.5 10.9 0 22.4 3 29.6 8.5l-5 10.6z" fill="#054C6E"/>
-            <path d="M111.2 36.7h13.8v73.2h-13.8l-44.5-48.8v48.8H53V36.7h13l45.2 49.5V36.7z" fill="#054C6E"/>
-            <path d="M242.5 62.2c0-14.2-11.7-15.8-16.9-15.8h-21.2v63.5h14.2V84.3h3.9l15.2 26.6h16.2l-16.5-28c10.1-3.9 15.1-11.8 15.1-20.7zm-23.6 11.7h-0.3V56.7h5.6c4.3 0 8.8 2 8.8 8.8 0 4.9-3.5 8.4-10.1 8.4h-4z" fill="#054C6E"/>
-        </svg>
-        
-        <!-- Icône de maintenance en SVG -->
-        <svg class="maintenance-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-            <path d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-42.1-42.1 74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.6-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7z"/>
-        </svg>
-        
-        <h1>Notre site est en maintenance</h1>
-        
-        <p>Nous travaillons actuellement à l'amélioration de notre site pour vous offrir une meilleure expérience. Nous serons de retour très bientôt!</p>
-        
-        <p>Merci de votre patience et de votre compréhension.</p>
-        
-        <div class="url">
-            <p>sgs.nolinor.com</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <p class="logo-container">
+                <img src="https://nolinor.com/wp-content/uploads/2021/07/Icon-Nolinor-gold.svg" alt="Nolinor Logo" style="width: 100px; height: auto;">
+            </p>
+            
+            <h1 class="display-4">
+                Authentification SGS échouée
+            </h1>
+            
+            <div class="alert alert-danger" role="alert" style="margin: 25px 0;">
+                Vous devez être connecté pour accéder à cette page.
+            </div>
+            
+            <p class="lead">
+                Une erreur s'est produite lors de l'authentification.
+                Veuillez vous connecter au SGS et réessayer.
+                Nous nous excusons pour tout inconvénient que cela pourrait causer.
+                Si le problème persiste ou si vous avez des questions, veuillez contacter le support technique SGS.
+                Vous pouvez fermer cette fenêtre.
+            </p>
+            
+            <p class="url-footer">
+                sgs.nolinor.com
+            </p>
         </div>
     </div>
 </body>
